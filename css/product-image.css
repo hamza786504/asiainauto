@@ -1,0 +1,42 @@
+*{
+    margin: 0; 
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+.wrapper{
+    text-align: center;
+}
+.varients{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.varients .varient{
+    height: 100px; 
+    width: 100px;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+}
+.varients .varient.active{
+    border: 1px solid #8d8d8d;
+}
+.product-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+.product-img .main_image{
+    flex: 1;
+    max-height: 500px;
+}
+.product-img .main_image img{
+    height: 100%;
+}
+.varients .varient img{
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 800px){
+    .product-img , .product-info {
+        flex: 1 !important;
+    }
+    .wrapper{
+        flex-direction: column !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+}
+@media screen and (max-width: 400px){
+    footer .container .row .col ul li a{
+      font-size: 13px !important;
+    }
+}

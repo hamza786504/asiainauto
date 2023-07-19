@@ -1,0 +1,91 @@
+
+
+CREATE TABLE categories (
+	category_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    category_name varchar(100) NOT NULL,
+    products int NOT NULL
+);
+
+
+
+CREATE TABLE tags(
+	tags_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    tags_name varchar(50) NOT NULL,
+    usedby_products INT NOT NULL
+);
+
+
+CREATE TABLE products (
+	product_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    product_name varchar(500) NOT NULL,
+    product_tagline varchar(500) NOT NULL,
+    product_description varchar(10000) NOT NULL,
+    purchase_price INT NOT NULL,
+    sale_price INT NOT NULL,
+    discounted_price INT,
+    stock INT NOT Null,
+    tag INT,
+    FOREIGN KEY (tag) REFERENCES tags(tags_id),
+   	varient_one varchar(100) NOT NULL,
+    varient_two varchar(100),
+    varient_three varchar(100),
+    varient_four varchar(100),
+    total_sales INT NOT NULL,
+    status INT NOT NULL,
+    category INT NOT NULL,
+    FOREIGN KEY (category) REFERENCES categories(category_id),
+    date varchar(50) NOT NULL
+);
+
+
+
+CREATE TABLE admin_users (
+	user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username varchar(100) NOT NULL,
+    user_email varchar(100) NOT NULL UNIQUE,
+    user_password varchar(500) NOT NULL,
+    role varchar(100) NOT NULL
+);
+
+
+INSERT INTO admin_users (username , user_email , user_password, role) 
+VALUES ("domo","demo@gmail.com","admin","admin");
+
+INSERT INTO tags (tags_name , usedby_products) VALUES ("cheap", 0), ("trending", 0), ("in demand", 0);
+INSERT INTO categories (category_name,products) VALUES ("imac",1), ("laptop",0), ("assessories",0);
+
+
+INSERT INTO products (product_name , product_tagline , product_description , purchase_price , sale_price , discounted_price , stock,tag , varient_one , varient_two , varient_three , varient_four , total_sales , status, category,date) VALUES ("Apple Imac MHK03 - 7th Gen Core i5 2.3Ghz processor","21.5 LED Display Intel Iris Plus Graphics 640 Magic Mouse 2 & Magic Keyboard Included (Space Gray 2020)","Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum incidunt inventore obcaecati vel, iusto eum cupiditate dicta magni pariatur voluptatibus repudiandae perferendis illum quidem facilis veritatis sit distinctio enim aliquid.",10000,12000,12000,50,1,"imac.jpg","imac2.jpg","imac3.jpg","logo.jpg",0,1,1,"19-feb-2022");
+
+
+CREATE TABLE order_types(
+	order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    order_type varchar(100) NOT NULL,
+    total_orders INT
+);
+
+
+CREATE TABLE orders(
+	order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer INT NOT NULL,
+    FOREIGN KEY (customer) REFERENCES customers(customer_id),
+    product_id INT,
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    order_type INT,
+    FOREIGN KEY (order_type) REFERENCES order_types(order_id),
+    delivery_location varchar(500),
+    order_date varchar(50)
+);
+
+CREATE TABLE customers(
+	customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    customer_name varchar(100) NOT NULL,
+    customer_email varchar(100) NOT NULL,
+    customer_phone varchar(100) NOT NULL,
+
+    customer_query varchar(5000),
+    customer_query_date varchar(30),
+    customer_query_status varchar(50),
+    customer_query_replay varchar(5000),
+    orders INT
+);

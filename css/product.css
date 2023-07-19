@@ -1,0 +1,239 @@
+.wrapper {
+    max-width: 800px;
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+}
+.product-img {
+    flex-basis: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+.product-img img {
+    max-width: 400px;
+    width: 100%;
+}
+.product-info {
+    flex-basis: 50%;
+    padding: 20px;
+}
+.product-text h1.product-title{
+    font-size: 34px;
+    color: #353535;
+}
+.product-text h2.product-tagline {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.1em;
+}
+.product-text p.product-description {
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.addtocart-btn{
+    height: 50px;
+    max-width: 176px; width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #343d46;
+    cursor: pointer;
+    outline: none;
+}
+.addtocart-btn:hover {
+    background-color: black;
+}
+table.product_quantity{
+    margin: 20px 0;
+    max-width: 400px;
+    width: 100%;
+    border-collapse: collapse;
+}
+table.product_quantity tr{
+    height: 50px;
+    border-bottom: 1px solid #ebeaea;
+}
+table.product_quantity tr td{
+    width: 50%;
+    padding: 10px 0;
+}
+table.product_quantity tr td select{
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    height: 35px;
+}
+table.product_quantity tr td button.wishlist-btn{
+    border: #ebeaea;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #ebeaea;
+    color: black;
+}
+table.product_quantity tr td button.wishlist-btn i.icon.fa-heart{
+    color:#353535;
+}
+table.product_quantity tr td .quantity-counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.308);
+    margin-right: 0;
+}
+table.product_quantity tr td .quantity-counter .counter-change-btn ,
+    table.product_quantity tr td .quantity-counter h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px; width: 50px;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+}
+table.product_quantity tr td .quantity-counter h2{
+    line-height: 1.6;
+    font-weight: normal;
+}
+table.product_quantity tr td .quantity-counter .counter-change-btn{
+    font-size: 25px;
+}
+.varients{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.varients .varient{
+    height: 100px; width: 100px;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+}
+.varients .varient.active{
+    border: 1px solid #8d8d8d;
+}
+.varients .varient img{
+    width: 100%;
+}
+.varients_model{
+    background-color: rgba(0, 0, 0, 0.76);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.varients_model .container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

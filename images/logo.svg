@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Poppins-Medium, Poppins;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        font-family: Poppins-ExtraLightItalic, Poppins;
+        font-style: italic;
+        font-weight: 200;
+      }
+
+      .cls-3 {
+        fill: #16bff4;
+        font-size: 187.81px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(55.55 215.73)"><tspan class="cls-1" x="0" y="0">ASIAN </tspan><tspan class="cls-2" x="609.05" y="0">AUTO</tspan></text>
+</svg>
